@@ -15,7 +15,24 @@ class Binary_Search_Tree:
       self._right = None
       self._height = 0
     #Add methods after
+     def insert(self, value):
+      
+      if value > self._value:
+        
+        if self._right is not None:
+          self._right.insert(value)
+          
+        else:
+          self._right = Binary_Search_Tree._BST_Node(value)
+      
+      elif value < self._value:
 
+        if self._left is not None:
+          self._left.insert(value)
+          
+        else:
+          self._left = Binary_Search_Tree._BST_Node(value)
+          
   def __init__(self):
     self._root = None
     # TODO complete initialization
