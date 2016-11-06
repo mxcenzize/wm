@@ -13,7 +13,7 @@ class Binary_Search_Tree:
       self._value = value
       self._left = None
       self._right = None
-      self._height = 1
+      self._height = 0
     #Add methods after
 
   def __init__(self):
