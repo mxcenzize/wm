@@ -72,6 +72,7 @@ class Binary_Search_Tree:
     pass # TODO replace pass with your implementation
 
   def get_height(self):
+    return self._height
     # return an integer that represents the height of the tree.
     # assume that an empty tree has height 0 and a tree with one
     # node has height 1. This method must operate in constant time.
