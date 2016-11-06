@@ -21,6 +21,9 @@ class Binary_Search_Tree:
     # TODO complete initialization
 
   def insert_element(self, value):
+    newest = Binary_Search_Tree._BST_Node(value)
+    if self._root == None: 
+      self._root = newest
     # Insert the value specified into the tree at the correct
     # location based on "less is left; greater is right" binary
     # search tree ordering. If the value is already contained in
