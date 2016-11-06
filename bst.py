@@ -6,9 +6,7 @@ class Binary_Search_Tree:
   # discussed in class
 
   class _BST_Node:
-    # TODO The Node class is private. You may add any attributes and
-    # methods you need.
-
+    
     def __init__(self, value):
       self._value = value
       self._left = None
@@ -19,19 +17,28 @@ class Binary_Search_Tree:
       
       if value > self._value:
         
+       if value > self._value: #value greater, move right 
+        
         if self._right is not None:
           self._right.insert(value)
           
-        else:
+        else: #end of treee, insert 
           self._right = Binary_Search_Tree._BST_Node(value)
       
-      elif value < self._value:
-
+      elif value < self._value: #value lesser, move left
+        
         if self._left is not None:
           self._left.insert(value)
           
-        else:
+        else: #end of tree, insert
           self._left = Binary_Search_Tree._BST_Node(value)
+        
+      else: #self._value == value
+	raise ValueError('value %r is already in the tree' % value)
+      
+      
+      def remove(self, value):
+	
           
   def __init__(self):
     self._root = None
