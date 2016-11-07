@@ -9,7 +9,6 @@ class Binary_Search_Tree:
 		      	self._height = 0
 			
 		def insert(self, value):
-     		 	""" _insert? """
 			if value > self._value: 
 			#value greater, recur right
 				if self._right is not None:
