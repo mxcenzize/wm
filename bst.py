@@ -58,8 +58,36 @@ class Binary_Search_Tree:
 				#removing r from the subtree rooted at t's right child.
 	      			self._value = self._right._value
 	     			self._right = self._right._remove(self._right._value)
-
+		
+		def in_order(self):
+		#In-Order: Left child first, then parent, then right child(recursively)
+			tree_str = []
 			
+			if self._left is not None:
+				tree_str.append(self._left.in_order())
+				
+			tree_str.append(self._value.in_order())
+			
+			if self._right is not None:
+				tree_str.append(self.right.in_order())
+				
+			return ', '.join(tree_str)
+		
+		def pre_order(self):
+		#Pre-Order: Parent first, then left child, then right child(recursively)
+			tree_str = []
+			
+			tree_str.append(self._value.in_order())
+			
+			if self._left is not None:
+				tree_str.append(self._left.in_order())
+			
+			if self._right is not None:
+				tree_str.append(self._right.in_order())
+			
+			return ', '.join(tree_str)
+		
+		#def post_order(self):
 
 
 	def __init__(self):
