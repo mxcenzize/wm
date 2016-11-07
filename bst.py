@@ -71,7 +71,7 @@ class Binary_Search_Tree:
 			if self._right is not None:
 				tree_str.append(self.right.in_order())
 				
-			return ', '.join(tree_str)
+			return ", ".join(tree_str)
 		
 		def pre_order(self):
 		#Pre-Order: Parent first, then left child, then right child(recursively)
@@ -85,10 +85,23 @@ class Binary_Search_Tree:
 			if self._right is not None:
 				tree_str.append(self._right.in_order())
 			
-			return ', '.join(tree_str)
+			return ", ".join(tree_str)
 		
-		#def post_order(self):
-
+		def post_order(self):
+		#Post-Order: Left child first, then right child, then parent(recursively)
+			tree_str = []
+			
+			if self._left is not None:
+				tree_str.append(self._left.in_order())
+			
+			if self._right is not None:
+				tree_str.append(self._right.in_order())
+			
+			tree_str.append(self._value.in_order())
+			
+			return ", ".join(tree_str)
+			
+		
 
 	def __init__(self):
 		self._root = None
