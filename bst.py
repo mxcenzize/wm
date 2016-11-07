@@ -42,7 +42,7 @@ class Binary_Search_Tree:
 			#value less, move left
 				if self._left is None:
 					raise ValueError('value%r is not in tree' % value)
-				self._left = self._right.remove(value)
+				self._left = self._left.remove(value)
 			else:
 			# found value, self._value == value
 			"""need further code here"""
