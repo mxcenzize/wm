@@ -34,19 +34,32 @@ class Binary_Search_Tree:
 
 		def remove(self, value):
 			if value > self._value:
-			#value greater, move right
-				if self._right is None:
+	    		#value greater, move right
+		    		if self._right is None:
 					raise ValueError('value %r is not in tree' % value)
-				self._right = self._right.remove(value)
-			elif value < self._value:
-			#value less, move left
-				if self._left is None:
-					raise ValueError('value%r is not in tree' % value)
-				self._left = self._left.remove(value)
-			else:
-			# found value, self._value == value
-			"""need further code here"""
-			pass 
+		    		self._right = self._right.remove(value)
+	    		elif value < self._value:
+	   		 #value less, move left
+		    		if self._left is None:
+			    		raise ValueError('value%r is not in tree' % value)
+		    		self._left = self.left.remove(value)
+	    		else:
+	    		#self._value == value
+	   		#if t has one/no child
+	      		#If t's left child is None, then update t to be t's right child.
+	      		#Otherwise, update t to be t's left child.
+	      			if self._left is None:
+					return self._right
+	      			elif self._right is None:
+					return self._left
+				#Root has two children
+				#t has two children (neither child reference is None), then
+				#update t's value with the smallest value r from t's right child.
+				#Then update t's right child to be the subtree returned by
+				#removing r from the subtree rooted at t's right child.
+	      			self._value = self._right._value
+	     			self._right = self._right._remove(self._right._value)
+
 			
 
 
