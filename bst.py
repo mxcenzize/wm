@@ -14,7 +14,7 @@ class Binary_Search_Tree:
 				if self._right is not None:
 					self._right.insert(value)
 				else: 
-				#end of treee, insert 
+				#end of tree, insert 
   					self._right = Binary_Search_Tree._BST_Node(value)
 
 			elif value < self._value: 
