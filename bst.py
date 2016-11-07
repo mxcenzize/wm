@@ -119,7 +119,7 @@ class Binary_Search_Tree:
 # methods to support the recursion control variable.
 		pass # TODO replace pass with your implementation
 
-def remove_element(self, value):
+	def remove_element(self, value):
 # Remove the value specified from the tree, raising a ValueError
 # if the value isn't found. When a replacement value is necessary,
 # select the minimum value to the from the right as this element's
@@ -129,9 +129,9 @@ def remove_element(self, value):
 # implementations). Your solution must be recursive. 
 # This will involve the introduction of additional private
 # methods to support the recursion control variable.
-pass # TODO replace pass with your implementation
+	pass # TODO replace pass with your implementation
 
-def in_order(self):
+	def in_order(self):
 # Construct and return a string representing the in-order
 # traversal of the tree. Empty trees should be printed as [ ].
 # Trees with one value should be printed as [ 4 ]. Trees with more
@@ -139,9 +139,9 @@ def in_order(self):
 # Your solution must be recursive. This will involve the introduction
 # of additional private methods to support the recursion control 
 # variable.
-pass # TODO replace pass with your implementation
+	pass # TODO replace pass with your implementation
 
-def pre_order(self):
+	def pre_order(self):
 # Construct and return a string representing the pre-order
 # traversal of the tree. Empty trees should be printed as [ ].
 # Trees with one value should be printed in as [ 4 ]. Trees with
@@ -149,9 +149,9 @@ def pre_order(self):
 # Your solution must be recursive. This will involve the introduction
 # of additional private methods to support the recursion control 
 # variable.
-pass # TODO replace pass with your implementation
+	pass # TODO replace pass with your implementation
 
-def post_order(self):
+	def post_order(self):
 # Construct an return a string representing the post-order
 # traversal of the tree. Empty trees should be printed as [ ].
 # Trees with one value should be printed in as [ 4 ]. Trees with
@@ -159,17 +159,17 @@ def post_order(self):
 # Your solution must be recursive. This will involve the introduction
 # of additional private methods to support the recursion control 
 # variable.
-pass # TODO replace pass with your implementation
+	pass # TODO replace pass with your implementation
 
-def get_height(self):
-return self._height
+	def get_height(self):
+	return self._height
 # return an integer that represents the height of the tree.
 # assume that an empty tree has height 0 and a tree with one
 # node has height 1. This method must operate in constant time.
-pass # TODO replace pass with your implementation
+	pass # TODO replace pass with your implementation
 
-def __str__(self):
-return self.in_order()
+	def __str__(self):
+	return self.in_order()
 
 if __name__ == '__main__':
 pass #unit tests make the main section unnecessary.
