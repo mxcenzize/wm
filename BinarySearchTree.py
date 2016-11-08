@@ -31,7 +31,6 @@ class Binary_Search_Tree:
 
   def __init__(self):
     self._root = None
-    # TODO complete initialization
 
   def insert_element(self, value):
     self._root = self._private_insert(value, self._root)
@@ -89,17 +88,6 @@ class Binary_Search_Tree:
     
     node._height = node._update_height()
     return node
-    
-    # Remove the value specified from the tree, raising a ValueError
-    # if the value isn't found. When a replacement value is necessary,
-    # select the minimum value to the from the right as this element's
-    # replacement. Take note of when to move a node reference and when
-    # to replace the value in a node instead. It is not necessary to
-    # return the value (though it would reasonable to do so in some 
-    # implementations). Your solution must be recursive. 
-    # This will involve the introduction of additional private
-    # methods to support the recursion control variable.
-    pass # TODO replace pass with your implementation
 
   def in_order(self):
     if self._root is None:
