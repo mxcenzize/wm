@@ -61,17 +61,17 @@ class Binary_Search_Tree:
 		
 		def in_order(self):
 		#In-Order: Left child first, then parent, then right child(recursively)
-			tree_str = []
-			
+			tree_str = str("")
+			##Made changes to tree_str
 			if self._left is not None:
-				tree_str.append(self._left.in_order())
+				tree_str = tree_str + self._left.in_order()
 				
 			tree_str.append(self._value.in_order())
 			
 			if self._right is not None:
 				tree_str.append(self.right.in_order())
 				
-			return ", ".join(tree_str)
+			return tree_str
 		
 		def pre_order(self):
 		#Pre-Order: Parent first, then left child, then right child(recursively)
