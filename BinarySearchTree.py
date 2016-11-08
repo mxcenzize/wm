@@ -86,8 +86,25 @@ class Binary_Search_Tree:
     pass # TODO replace pass with your implementation
 
   def in_order(self):
-    #start with empty string str("")
-    
+    if self._root is None:
+      return str([])
+    else:
+      self._root = self._private_in_order()
+      
+ # WHAT DO WE PASS WHEN WE CALL THIS
+ # Also, How to print with brackets 
+  def _private_in_order(self, node):
+    tree_str = str("")
+		##Made changes to tree_str
+		if node._left is not None:
+      tree_str = tree_str + str(node._left)
+		
+    tree_str = tree_str + str(node._value)
+			
+		if self._right is not None:
+				tree_str = tree_str + str(node._right)
+				
+		  return tree_str
     
     # Construct and return a string representing the in-order
     # traversal of the tree. Empty trees should be printed as [ ].
@@ -96,19 +113,51 @@ class Binary_Search_Tree:
     # Your solution must be recursive. This will involve the introduction
     # of additional private methods to support the recursion control 
     # variable.
-    pass # TODO replace pass with your implementation
-
+    #pass  TODO replace pass with your implementation
   def pre_order(self):
+    if self._root is None:
+      return str([])
+    else:
+      self._root = self._private_pre_order()
+    
+  def _private_pre_order(self):
+    	tree_str = str("")
+			tree_str = tree_str + str(node._value)
+			
+			if self._left is not None:
+				tree_str = tree_str + str(node._left)
+			
+			if self._right is not None:
+				tree_str= tree_str + str(node._right)
+			
+			return tree_str
     # Construct and return a string representing the pre-order
-    # traversal of the tree. Empty trees should be printed as [ ].
+    # traversal of the tree. Empty trees should be printed as .
     # Trees with one value should be printed in as [ 4 ]. Trees with
     # more than one value should be printed as [ 4, 7 ]. Note the spacing.
     # Your solution must be recursive. This will involve the introduction
     # of additional private methods to support the recursion control 
     # variable.
-    pass # TODO replace pass with your implementation
+    # pass TODO replace pass with your implementation
 
   def post_order(self):
+    if self._root is None:
+      return str([])
+    else:
+      self._root = self._private_post_order()
+  
+  def _private_post_order(self):
+    tree_str = str("")
+		if self._left is not None:
+      tree_str.append(node._left)
+			
+		if self._right is not None:
+			tree_str.append(node._right)
+			
+		tree_str.append(node._value)
+			
+			return tree_str
+    
     # Construct an return a string representing the post-order
     # traversal of the tree. Empty trees should be printed as [ ].
     # Trees with one value should be printed in as [ 4 ]. Trees with
@@ -116,7 +165,7 @@ class Binary_Search_Tree:
     # Your solution must be recursive. This will involve the introduction
     # of additional private methods to support the recursion control 
     # variable.
-    pass # TODO replace pass with your implementation
+    # pass  TODO replace pass with your implementation
 
   def get_height(self):
     if self._root is None:
