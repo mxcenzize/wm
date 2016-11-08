@@ -9,8 +9,25 @@ class Binary_Search_Tree:
       self._height = 1
       
     def _update_height(self):
-      if self
-      pass
+      max_value = 0
+      
+      if self._left is not None or self._right is not None:
+        
+        if self._left is None:
+          max_value = self._right._height
+          
+        elif self._right is None:
+          max_value = self._left._height
+        
+        else:
+          if self._right._height > self._left._height: 
+            max_value = self._right._height
+          
+          else:
+            max_value = self._left._height
+          
+        height = max_value + 1
+        return height
 
   def __init__(self):
     self._root = None
@@ -32,9 +49,8 @@ class Binary_Search_Tree:
       
       else:
         raise ValueError 
-    
-    #update height
-    self._Binary_Search_Tree._BST_Node._update_height() 
+	
+    node._height = node._update_height()
     return node
 
   def remove_element(self, value):
@@ -71,7 +87,7 @@ class Binary_Search_Tree:
       elif value > node._value:
         node._right = self._private_remove(value, node._right) 
     
-    #height    
+    node._height = node._update_height()
     return node
     
     # Remove the value specified from the tree, raising a ValueError
