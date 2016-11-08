@@ -3,7 +3,7 @@
 class Binary_Search_Tree:
 	class _BST_Node:
 		def __init__(self, value):
-			self._value = value
+			self._value = value  
 		      	self._left = None
 		      	self._right = None
 		      	self._height = 0
