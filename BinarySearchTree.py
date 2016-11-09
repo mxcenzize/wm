@@ -1,4 +1,4 @@
-class Binary_Search_Tree:
+ class Binary_Search_Tree:
 
   class _BST_Node:
     
