@@ -28,6 +28,9 @@ class Binary_Search_Tree:
           
         height = max_value + 1
         return height
+      
+      else:
+        return self._height
 
   def __init__(self):
     self._root = None
